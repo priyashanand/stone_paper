@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="typing-demo">
+            <p>    you chose easy mode (mere mortal) .   </p>
+        </div>
+    </div>
+    <div>
+        <% if (locals.compch && locals.res) { %>
+            <h1>
+                <%= compch %>
+                <%= res %>
+            </h1>
+        <% } else { %>
+            <h1>show your worth</h1>    
+        <% } %>
+        
+        <form class="easyform" action="/stone_easy" method="POST">
+            <input type="submit" value="stone">
+        </form>
+        <form class="easyform" action="/paper_easy" method="POST">
+            <input type="submit" value="paper">
+        </form>
+        <form class="easyform" action="/scissor_easy" method="POST">
+            <input type="submit" value="scissor">
+        </form>
+    </div>
+    <!-- <div>
+        <button id="clickButton">Click Me</button>
+        <p>Click Count: <span id="clickCount">0</span></p>
+    </div> -->
+</body>
+</html>

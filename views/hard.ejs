@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="typing-demo">
+            <p>    you chose hard mode (mortal arrogation) .   </p>
+        </div>
+    </div>
+    <% if (locals.compch && locals.res) { %>
+        <h1>
+            <%= compch %>
+            <%= res %>
+        </h1>
+    <% } else { %>
+        <h1>show your worth</h1>    
+    <% } %>
+    <form class="easyform" action="/stone_hard" method="POST">
+        <input type="submit" value="stone">
+    </form>
+    <form class="easyform" action="/paper_hard" method="POST">
+        <input type="submit" value="paper">
+    </form>
+    <form class="easyform" action="/scissor_hard" method="POST">
+        <input type="submit" value="scissor">
+    </form>
+    <form class="easyform" action="/lizard" method="POST">
+        <input type="submit" value="lizard">
+    </form>
+    <form class="easyform" action="/spock" method="POST">
+        <input type="submit" value="spock">
+    </form>
+    <% if (locals.compch && locals.res) { %>
+        <h1>
+            dare to challenge again
+            <%= compch %>
+            <%= res %>
+        </h1>
+    <% } %>
+</body>
+</html>
